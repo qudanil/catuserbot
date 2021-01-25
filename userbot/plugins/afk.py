@@ -108,15 +108,15 @@ async def on_afk(event):
         msg = None
         if link and reason:
             message_to_reply = (
-                f"**I am AFK**\n\n**AFK Since :** `{endtime}`\n**Reason : **{reason}"
+                f"**Saya Sedang Offline**\n\n**Sejak :** `{endtime}`\n**Alasan : **{reason}"
             )
         elif reason:
             message_to_reply = (
-                f"**I am AFK\n\nAFK Since :** `{endtime}`\n**Reason : **`{reason}`"
+                f"**Saya Sedang Offline**\n\n**Sejak :** `{endtime}`\n**Alasan : **`{reason}`"
             )
         else:
             message_to_reply = (
-                f"`I am AFK\n\nAFK Since :{endtime}\nReason : Not Mentioned ( ಠ ʖ̯ ಠ)`"
+                f"`Saya Sedang Offline\n\nOFFLINE Sejak :{endtime}\nAlasan : Tidak Disebutkan ( ಠ ʖ̯ ಠ)`"
             )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
             msg = await event.reply(message_to_reply)
