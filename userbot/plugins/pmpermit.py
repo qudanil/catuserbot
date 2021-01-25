@@ -19,7 +19,7 @@ PREV_REPLY_MESSAGE = {}
 CACHE = {}
 PMPERMIT_PIC = Config.PMPERMIT_PIC
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "cat"
-USER_BOT_WARN_ZERO = "You were spamming my peru master's inbox, henceforth you are blocked by my master's userbot. **Now GTFO, i'm playing minecraft** "
+USER_BOT_WARN_ZERO = "Kamu telah melakukan Spam, saya akan otomatis memblokir akunmu. **TUNGGU SAMPAI TUAN SAYA AKTIF DAN MELEPASKAN BLOKIRAN ANDA** "
 
 
 if Config.PRIVATE_GROUP_ID is not None:
@@ -248,15 +248,15 @@ if Config.PRIVATE_GROUP_ID is not None:
                         warns=warns,
                     )
                     + "\n\n"
-                    + "**Send** `/start` ** so that my master can decide why you're here.**"
+                    + "**Kirim** `/start` ** untuk melihat opsi alasan anda mengirim pesan kepada tuan saya..**"
                 )
             else:
 
                 USER_BOT_NO_WARN = (
-                    f"`Hi `{mention}`, I haven't approved you yet to personal message me, Don't spam my inbox."
-                    f"Just say the reason and wait until you get approved.\
-                                    \n\nyou have {warns}/{totalwarns} warns`\
-                                    \n\n**Send** `/start` **so that my master can decide why you're here.**"
+                    f"`Hallo `{mention}`, Saya belum menyetujui pesan anda, jangan spam.."
+                    f"Kirim alasan mengapa anda ingin mengirim pesan kepada tuan saya.\
+                                    \n\nKamu memiliki {warns}/{totalwarns} Peringatan sebelum di blokir otomatis`\
+                                    \n\n****Kirim** `/start` ** untuk melihat opsi alasan anda mengirim pesan kepada tuan saya..**"
                 )
         else:
             if Config.CUSTOM_PMPERMIT_TEXT:
@@ -277,9 +277,9 @@ if Config.PRIVATE_GROUP_ID is not None:
                 )
             else:
                 USER_BOT_NO_WARN = (
-                    f"`Hi `{mention}`, I haven't approved you yet to personal message me, Don't spam my inbox."
-                    f"Just say the reason and wait until you get approved.\
-                                    \n\nyou have {warns}/{totalwarns} warns`"
+                    f"`Hi `{mention}`, Saya belum menyetujui pesan anda, jangan spam dan tunggu sampai tuan saya kembali."
+                    f"Kirim alasan mengapa anda ingin mengirim pesan kepada tuan saya.\
+                                    \n\nKamu memiliki {warns}/{totalwarns} Peringatan sebelum di blokir otomatis"
                 )
         if PMPERMIT_PIC:
             r = await event.reply(USER_BOT_NO_WARN, file=PMPERMIT_PIC)
